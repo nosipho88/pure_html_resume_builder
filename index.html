@@ -1,0 +1,105 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>AI Resume Builder — Pure HTML/JS + Firebase</title>
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <link rel="stylesheet" href="style.css">
+  <script src="https://www.gstatic.com/firebasejs/9.22.2/firebase-app-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/9.22.2/firebase-auth-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/9.22.2/firebase-firestore-compat.js"></script>
+</head>
+<body>
+  <div class="container">
+    <h1>AI Resume Builder (HTML/JS + Firebase)</h1>
+    <form id="resumeForm">
+      <label for="name">Full name</label>
+      <input id="name" type="text" placeholder="Your full name" required>
+
+      <label for="email">Email</label>
+      <input id="email" type="email" placeholder="you@example.com">
+
+      <label for="phone">Phone</label>
+      <input id="phone" type="tel" placeholder="+27 83 000 0000">
+
+      <label for="location">Location</label>
+      <input id="location" type="text" placeholder="City, Country">
+
+      <label for="photoFile">Photo (optional)</label>
+      <input id="photoFile" type="file" accept="image/*">
+      <label for="photoUrl">Or image URL</label>
+      <input id="photoUrl" type="url" placeholder="https://example.com/photo.jpg">
+
+      <label for="skills">Skills (comma separated)</label>
+      <input id="skills" placeholder="communication, customer support, javascript">
+
+      <label for="summary">Professional summary (leave blank for AI)</label>
+      <textarea id="summary" rows="3" placeholder="Brief professional summary"></textarea>
+
+      <label for="objective">Objective / Career goal</label>
+      <textarea id="objective" rows="2" placeholder="E.g. Seeking a customer support role where I can leverage..."></textarea>
+
+      <h3>Experience</h3>
+      <div id="experienceList">
+        <div class="exp">
+          <input class="exp-title" placeholder="Job Title">
+          <input class="exp-company" placeholder="Company">
+          <input class="exp-start" placeholder="Start (e.g. 2020)">
+          <input class="exp-end" placeholder="End (e.g. Present)">
+          <textarea class="exp-desc" placeholder="Description / bullets (optional)"></textarea>
+        </div>
+      </div>
+      <button type="button" id="addExp">+ Add Experience</button>
+
+      <label>Upload Job Description (optional)</label>
+      <input type="file" id="jobDescFile" accept=".txt,.pdf">
+
+      <h3>Achievements</h3>
+      <p class="muted">List key achievements one per line.</p>
+      <textarea id="achievements" rows="3" placeholder="Improved customer satisfaction by 20%&#10;Resolved critical bugs for 5 major clients"></textarea>
+
+      <h3>References</h3>
+      <p class="muted">Add one or more references. Use the + button to add another.</p>
+      <div id="referencesList">
+        <div class="ref-item">
+          <input class="ref-name" placeholder="Name (e.g. Jane Doe)">
+          <input class="ref-relationship" placeholder="Relationship (e.g. Manager)">
+          <input class="ref-contact" placeholder="Contact (email or phone)">
+          <button type="button" class="removeRef" style="display:none">Remove</button>
+        </div>
+      </div>
+      <button type="button" id="addRef">+ Add Reference</button>
+
+      <div class="actions">
+        <button type="button" id="generate">Generate Resume</button>
+        <button type="button" id="save">Save to Firestore</button>
+        <button type="button" id="downloadPdf">Download PDF (client-side)</button>
+
+        <label for="templateSelect">Template</label>
+        <select id="templateSelect">
+          <option value="classic">Classic (single-column)</option>
+          <option value="clean">Clean (alternate single-column)</option>
+          <option value="two-column">Two-column (sidebar)</option>
+          <option value="modern">Modern (card-based)</option>
+        </select>
+      </div>
+    </form>
+
+    <h2>Preview</h2>
+    <div id="preview" class="resume-preview"></div>
+
+    <h2>Sample Job Description</h2>
+    <p>Included: <a href="assets/sample_job_description.pdf" target="_blank">Week 4 – Project Week AI Resume Builder (sample PDF)</a></p>
+
+    <h2>Download Standalone Templates</h2>
+    <p>Download ready-to-edit HTML resume templates:</p>
+    <ul>
+      <li><a href="assets/templates/clean.html" target="_blank" download>Clean template (standalone)</a></li>
+      <li><a href="assets/templates/two-column.html" target="_blank" download>Two-column template (standalone)</a></li>
+      <li><a href="assets/templates/modern.html" target="_blank" download>Modern template (standalone)</a></li>
+    </ul>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>

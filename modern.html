@@ -1,0 +1,98 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Resume — Modern Template</title>
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <style>
+    body{font-family:'Segoe UI',Tahoma,Geneva,Verdana,sans-serif;background:linear-gradient(135deg,#667eea 0%,#764ba2 100%);padding:32px;min-height:100vh;margin:0}
+    .container{max-width:900px;margin:0 auto}
+    .resume{background:#fff;border-radius:12px;box-shadow:0 10px 40px rgba(0,0,0,0.15);overflow:hidden}
+    .header{background:linear-gradient(135deg,#667eea 0%,#764ba2 100%);color:#fff;padding:32px;text-align:center}
+    .header h1{margin:0;font-size:36px;font-weight:600}
+    .header .tagline{margin:8px 0 0 0;font-size:16px;opacity:0.9}
+    .header .contact{margin-top:12px;font-size:13px;opacity:0.85}
+    .content{padding:32px}
+    .row{display:flex;gap:24px;margin-bottom:24px}
+    .col{flex:1}
+    .section-title{font-size:14px;font-weight:700;color:#667eea;text-transform:uppercase;letter-spacing:1px;margin-bottom:12px;border-bottom:2px solid #667eea;padding-bottom:6px}
+    .skill-tags{display:flex;flex-wrap:wrap;gap:6px;margin-top:8px}
+    .skill-tag{background:#f0f4ff;color:#667eea;padding:6px 12px;border-radius:20px;font-size:13px;border:1px solid #e0e8ff}
+    .achievement{margin:8px 0;padding-left:16px;position:relative;font-size:14px}
+    .achievement:before{content:'★';position:absolute;left:0;color:#667eea;font-weight:bold}
+    .exp-item{margin-bottom:16px;padding-bottom:12px;border-bottom:1px solid #f0f0f0}
+    .exp-item:last-child{border-bottom:none}
+    .exp-title{font-weight:600;color:#333;font-size:14px}
+    .exp-meta{color:#888;font-size:13px;margin:4px 0}
+    .exp-desc{color:#555;font-size:13px;margin:6px 0;line-height:1.5}
+    .ref-item{margin:8px 0;padding:8px;background:#f9fbfd;border-left:3px solid #667eea;border-radius:2px;font-size:13px}
+    .ref-name{font-weight:600;color:#333}
+    @media (max-width:768px){.row{flex-direction:column}.header{padding:24px}}
+    @media print{body{background:transparent;padding:0}.resume{box-shadow:none}.header{color:#333;background:#fff;border-bottom:3px solid #667eea}}
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="resume">
+      <div class="header" style="position:relative">
+        <h1>Full Name</h1>
+        <img class="profile-photo" src="" alt="Photo">
+        <div class="tagline">Professional Title / Role</div>
+        <div class="contact">email@example.com · +27 83 000 0000 · City, Country</div>
+      </div>
+
+      <div class="content">
+        <div class="row">
+          <div class="col" style="flex:2">
+            <div class="section-title">Professional Summary</div>
+            <p style="font-size:14px;color:#555;line-height:1.6">Brief, compelling summary of your background, key skills, and what you bring to the table. Highlight your most relevant achievements and career trajectory.</p>
+          </div>
+          <div class="col">
+            <div class="section-title">Skills</div>
+            <div class="skill-tags">
+              <div class="skill-tag">Communication</div>
+              <div class="skill-tag">Teamwork</div>
+              <div class="skill-tag">JavaScript</div>
+              <div class="skill-tag">Problem Solving</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="section-title">Achievements</div>
+        <div class="achievement">Improved customer satisfaction by 20%</div>
+        <div class="achievement">Resolved critical issues for major clients</div>
+        <div class="achievement">Completed professional certification</div>
+
+        <div style="margin:24px 0">
+          <div class="section-title">Experience</div>
+          <div class="exp-item">
+            <div class="exp-title">Job Title</div>
+            <div class="exp-meta">Company Name • 2022 — Present</div>
+            <div class="exp-desc">Describe your role and accomplishments in brief bullet-friendly sentences. Highlight metrics and results.</div>
+          </div>
+          <div class="exp-item">
+            <div class="exp-title">Previous Job Title</div>
+            <div class="exp-meta">Previous Company • 2020 — 2022</div>
+            <div class="exp-desc">Earlier role description and achievements.</div>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="col">
+            <div class="section-title">Education</div>
+            <div style="font-size:14px">
+              <strong>Degree Name</strong><br>
+              <span style="color:#888">Institution — Year</span>
+            </div>
+          </div>
+          <div class="col">
+            <div class="section-title">References</div>
+            <div class="ref-item"><div class="ref-name">Jane Doe</div><div style="color:#666;font-size:12px">Manager — jane@example.com</div></div>
+            <div class="ref-item"><div class="ref-name">John Smith</div><div style="color:#666;font-size:12px">Team Lead — john@example.com</div></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+</html>

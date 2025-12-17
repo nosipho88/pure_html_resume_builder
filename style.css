@@ -1,0 +1,74 @@
+﻿body{font-family:Arial,Helvetica,sans-serif;background:#f6f7fb;padding:20px}
+body{font-family:Arial,Helvetica,sans-serif;background:#f6f7fb;padding:20px}
+.container{max-width:900px;margin:0 auto;background:white;padding:20px;border-radius:8px;box-shadow:0 6px 18px rgba(0,0,0,0.06)}#parent {
+  background: lightblue;
+  width: 300px;
+}
+
+#child {
+  background: gold;
+  width: 100%;
+  max-width: 150px;
+}/* Using a <background-color> */
+background: green;
+
+/* Using a <bg-image> and <repeat-style> */
+background: url("test.jpg") repeat-y;
+
+/* Using a <visual-box> and <'background-color'> */
+background: border-box red;
+
+/* A single image, centered and scaled */
+background: no-repeat center/80% url("../img/image.png");
+
+/* Global values */
+background: inherit;
+background: initial;
+background: revert;
+background: revert-layer;
+background: unset;
+input,textarea{width:100%;padding:8px;margin:6px 0;border:1px solid #ddd;border-radius:4px}
+.actions{display:flex;gap:10px;margin-top:10px}
+.resume-preview{background:#ffffff;padding:15px;border:1px solid #eee;border-radius:6px;margin-top:10px}
+.exp{border:1px dashed #e3e7ef;padding:8px;border-radius:6px;margin-bottom:8px}
+
+/* Reference inputs */
+.ref-item{display:flex;gap:8px;align-items:center;margin:6px 0}
+.ref-item input{flex:1}
+.ref-item .removeRef{background:#ffeded;border:1px solid #ffbdbd;padding:6px;border-radius:4px}
+
+/* Preview references style */
+.references div{margin:6px 0;font-size:14px}
+
+/* Print / PDF improvements */
+@page { margin: 18mm; }
+@media print {
+  body{background:#fff;color:#111}
+  .container, .actions { display:none !important; }
+  .resume-preview{border:none;padding:0;margin:0}
+  .resume { box-shadow:none; background:transparent }
+  /* Avoid splitting experience items across pages */
+  .exp-item, .references div, section { page-break-inside:avoid }
+  h1, h2, h3, h4 { color: #000 }
+}
+
+/* Template: Clean */
+.template-clean { max-width:720px; margin:0 auto; }
+.template-clean .clean-header { text-align:center; margin-bottom:12px }
+.template-clean .clean-header h1 { margin:0; font-size:26px }
+.template-clean section { border-top:1px solid #f0f2f6; padding:10px 0 }
+
+/* Template: Two-column */
+.template-two-column { display:flex; gap:20px }
+.template-two-column .sidebar { width:260px; background:#f7f9fc; padding:12px; border-radius:6px }
+.template-two-column .sidebar h2 { margin:0 0 8px 0 }
+.template-two-column .main { flex:1 }
+.template-two-column .skill-list { list-style:none; padding:0; margin:6px 0 }
+.template-two-column .skill-list li { background:#fff; padding:4px 6px; margin:4px 0; border-radius:4px; border:1px solid #eee }
+
+/* Small adjustments for preview wrapper */
+.resume-preview .resume { color:#111; font-size:14px }
+.resume-preview .exp-item { margin-bottom:8px }
+.achievements { list-style:none; padding-left:0 }
+.achievements li { margin:6px 0; padding-left:16px; position:relative }
+.achievements li:before { content:'✓'; position:absolute; left:0; color:#0066cc; font-weight:bold }

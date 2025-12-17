@@ -1,0 +1,81 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Resume — Two Column Template</title>
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <style>
+    body{font-family:Arial,Helvetica,sans-serif;background:#f6f7fb;padding:24px}
+    .wrap{max-width:900px;margin:0 auto;display:flex;gap:20px}
+    .sidebar{width:260px;background:#fff;padding:18px;border-radius:8px;border:1px solid #eee}
+    .main{flex:1;background:#fff;padding:18px;border-radius:8px;border:1px solid #eee}
+    h1{margin:0 0 6px 0}
+    .contact{color:#666;font-size:14px}
+    .skill-list{list-style:none;padding:0}
+    .skill-list li{background:#f0f6ff;padding:6px;margin:6px 0;border-radius:4px}
+    .exp{margin-bottom:12px}
+    .achievements{list-style:none;padding-left:0}
+    .achievements li{margin:6px 0;padding-left:16px;position:relative}
+    .achievements li:before{content:'✓';position:absolute;left:0;color:#0066cc;font-weight:bold}
+    @media (max-width:720px){.wrap{flex-direction:column}.sidebar{width:auto}}
+    .references div{margin:6px 0;font-size:14px}
+    @media print{body{background:#fff}.wrap>*{border:none}}
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <aside class="sidebar" style="position:relative">
+      <img class="profile-photo" src="" alt="Photo">
+      <h1>Full Name</h1>
+      <div class="contact">email@example.com<br>+27 83 000 0000<br>City, Country</div>
+      <h4 style="margin-top:12px">Skills</h4>
+      <ul class="skill-list">
+        <li>HTML/CSS</li>
+        <li>JavaScript</li>
+        <li>Customer Support</li>
+      </ul>
+    </aside>
+
+    <main class="main">
+      <section>
+        <h3>Objective</h3>
+        <p>Short objective / career goal — e.g. To obtain a customer-facing role where I can help customers and improve processes.</p>
+      </section>
+
+      <section>
+        <h3>Professional Summary</h3>
+        <p>Short paragraph summarizing experience and what you bring to an employer.</p>
+      </section>
+
+      <section>
+        <h3>Achievements</h3>
+        <ul class="achievements">
+          <li>Improved efficiency by 25%</li>
+          <li>Led successful project delivery</li>
+          <li>Received excellence award</li>
+        </ul>
+      </section>
+
+      <section>
+        <h3>Experience</h3>
+        <div class="exp">
+          <strong>Job Title</strong> — Company Name <small>(2022 — Present)</small>
+          <p>Describe your role and accomplishments in brief bullet-friendly sentences.</p>
+        </div>
+      </section>
+
+      <section>
+        <h3>Education</h3>
+        <div>Qualification — Institution — Year</div>
+      </section>
+      <section>
+        <h3>References</h3>
+        <div>
+          <div>Jane Doe — Manager — jane@example.com</div>
+          <div>John Smith — Team Lead — john@example.com</div>
+        </div>
+      </section>
+    </main>
+  </div>
+</body>
+</html>
